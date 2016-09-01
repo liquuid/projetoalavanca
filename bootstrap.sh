@@ -46,6 +46,8 @@ ln -fvs /usr/bin/nodejs /usr/bin/node
 echo "---> Install node packages"
 su - vagrant -c 'cd /var/www/wordpress/src; /usr/bin/npm --silent install' && \
 /usr/bin/npm -q install -g grunt-cli && \
+/usr/bin/npm -q install -g gulp && \
+
 su - vagrant -c 'cd /var/www/wordpress/src; /usr/local/bin/grunt less' && \
 
 echo "---> Enable site vhost"
