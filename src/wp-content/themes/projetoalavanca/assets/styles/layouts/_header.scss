@@ -1,0 +1,57 @@
+$laranja: #f39c12;
+$vermelho: #ee0000;
+.featured-button {
+  background: $vermelho;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.banner{
+  background: rgba(68,68,68,63);
+  z-index: 100;
+}
+.container{
+  width: 940px;
+  padding: 0px, 10px, 0px, 10px;
+  margin: 0px auto 0px auto;
+  background: url("/wp-content/themes/projetoalavanca/assets/images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+header {
+
+  #logo {
+    float: left;
+  }
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      float: right;
+      li {
+        list-style: none;
+        float: left;
+        a {
+          display: block;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 20px;
+        }
+        a:hover{
+          background: #222;
+        }
+        header nav ul li a:active{
+          -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+          -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
+
+        }
+      }
+    }
+
+  }
+}
+

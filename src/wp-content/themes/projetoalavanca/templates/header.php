@@ -15,7 +15,7 @@
         <li><a href="#">Blog</a></li>
         <li><a href="#">Eventos</a></li>
         <li><a href="#">Contato</a></li>
-        <li><a href="#">Doar</a></li>
+        <li><a href="#" class="featured-button">Doar</a></li>
       </ul>
       <?php
       if (has_nav_menu('primary_navigation')) :
