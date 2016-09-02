@@ -1,5 +1,8 @@
 $laranja: #f39c12;
 $vermelho: #ee0000;
+$header_image: "/wp-content/themes/projetoalavanca/assets/images/hero-bg.png";
+$alpha_header_image: 0.6;
+
 .featured-button {
   background: $vermelho;
   font-weight: bold;
@@ -7,19 +10,57 @@ $vermelho: #ee0000;
 }
 
 .banner{
-  background: rgba(68,68,68,63);
-  z-index: 100;
+  background: rgba(68,68,68,1);
 }
 .container{
   width: 940px;
   padding: 0px, 10px, 0px, 10px;
   margin: 0px auto 0px auto;
-  background: url("/wp-content/themes/projetoalavanca/assets/images/hero-bg.png");
+}
+#hero {
+  /*background: url("/wp-content/themes/projetoalavanca/assets/images/hero-bg.png");*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background: rgba(68, 68, 68, 0.6);
+  background-image: linear-gradient(to bottom, rgba(150, 150, 150, $alpha_header_image), rgba(150, 150, 150, $alpha_header_image)), url($header_image);
+  background-image: -moz-linear-gradient(top, rgba(150, 150, 150, $alpha_header_image), rgba(150, 150, 150, $alpha_header_image)), url($header_image);
+  background-image: -o-linear-gradient(top, rgba(150, 150, 150, $alpha_header_image), rgba(150, 150, 150, $alpha_header_image)), url($header_image);
+  background-image: -ms-linear-gradient(top, rgba(150, 150, 150, $alpha_header_image), rgba(150, 150, 150, $alpha_header_image)), url($header_image);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, $alpha_header_image)), to(rgba(150, 150, 150, $alpha_header_image))), url($header_image);
+  background-image: -webkit-linear-gradient(top, rgba(150, 150, 150, $alpha_header_image), rgba(150, 150, 150, $alpha_header_image)), url($header_image);
 
 }
+
+#hero-title {
+  width: 520px;
+  padding: 60px 0;
+  float: left;
+  h1 {
+    font-size: 8em;
+    color: #ffffff;
+  }
+  h2 {
+    font-size: 2em;
+    color: #ffffff;
+  }
+}
+
+#secondary-cta {
+  background: #eeeeee;
+  padding: 30px 0;
+}
+#secondary-cta h4{
+  font-weight: 200;
+  font-size: 24px;
+  float: left;
+}
+#secondary-cta form{
+  margin: 0;
+  float:right;
+}
+
+
 header {
 
   #logo {
@@ -42,6 +83,8 @@ header {
         }
         a:hover{
           background: #222;
+          color: #ffffff;
+          text-decoration: none;
         }
         header nav ul li a:active{
           -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.8) inset;
@@ -53,5 +96,72 @@ header {
     }
 
   }
+}
+
+
+.btn {
+  width:auto;
+  background: #0090bf;
+  border: 1px solid #1e728c;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  padding: 10px 20px 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  /* box shadows */
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  /* CSS3 transitions */
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+
+}
+.btn:hover {
+  color: #fff;
+  background-color: #0086b2;
+}
+.btn:active {
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  color: #fff;
+}
+.btn-large {
+  padding: 22px 30px;
+  font-size: 24px;
+  font-weight: 200;
+}
+.btn-secondary{
+  font-size: 20px;
+}
+.btn-small{
+  font-weight: bold;
+}
+
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active {
+  background: none;
+  border: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-secondary:hover {
+  text-decoration: underline;
+}
+.btn-secondary:active {
+  position: relative;
+  top: 1px;
+
+
 }
 
