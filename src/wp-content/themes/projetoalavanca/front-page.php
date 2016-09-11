@@ -13,7 +13,9 @@
 
 <!-- <?php query_posts(array('post_type' => 'page','post_parent'=>get_the_ID())); ?> -->
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content-page', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+ <div class="artigo">
+   <?php get_template_part('templates/content-page', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+ </div>
 <?php endwhile; ?>
 
 <?php the_posts_navigation(); ?>
